@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(231, 230, 230);
+}
+.container{
+    display: grid;
+    background-color: rgb(231, 230, 230);
+    grid-template-columns: repeat(4,1fr);
+    width: 400px;
+    height: 400px;
+    box-shadow: 
+    inset rgba(56, 57, 58, 0.185) 6px 6px 10px,
+    rgb(255, 255, 255) 6px 6px 10px;
+    padding: 20px;
+    perspective: 1000;
+}
+.container input,button{
+    border: 0;
+    outline: 0;
+    background-color: rgb(231, 230, 230);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.container input{
+    grid-column: 1 / 5;
+    padding: 0 30px;
+    font-size: 1.3rem;
+    box-shadow: inset ;
+    box-shadow: 
+    inset rgba(56, 57, 58, 0.199) 6px 6px 10px,
+    rgb(255, 255, 255) 6px 6px 10px;
+    margin-bottom: 20px;
+    margin: 15px;
+}
+.container button{
+    border-radius: 50%;
+    margin: 2px 15px;
+    box-shadow: 
+    inset rgba(56, 57, 58, 0.247) 6px 6px 10px,
+    rgb(255, 255, 255) 6px 6px 10px;
+    transition: all .5s ease-in-out;
+    animation: animate 2s ease-in-out infinite alternate;
+    animation-delay: calc(.2s * var(--i));
+
+}
+.container button:hover{
+}
+@keyframes animate{
+    0%{
+        transform: translate(-10px,10px);
+    }
+    100%{
+        transform: translate(10px,-10px);
+    }
+}
+.active{
+    background-color: lightblue;
+}
+@media screen and (max-width:560px){
+    .container{
+        height: 80%;
+        width: 80%;
+        padding: 0;
+        margin:  auto;
+        overflow: hidden;
+    }
+    .container button{
+        height: 50px;
+        width: 50px;
+    }
+    .container input{
+        margin: 25px 30px;
+    }
+}

@@ -1,0 +1,6 @@
+npm init
+npm i -g typescript
+npm i --save-dev @types/node
+tsc --init
+touch index.ts
+tsc
