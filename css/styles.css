@@ -14,8 +14,8 @@ body{
     display: grid;
     background-color: rgb(231, 230, 230);
     grid-template-columns: repeat(4,1fr);
-    width: 400px;
-    height: 400px;
+    width: 70%;
+    height: 70%;
     box-shadow: 
     inset rgba(56, 57, 58, 0.185) 6px 6px 10px,
     rgb(255, 255, 255) 6px 6px 10px;
@@ -43,7 +43,7 @@ body{
 }
 .container button{
     border-radius: 50%;
-    margin: 2px 15px;
+    margin: 5px 50px;
     box-shadow: 
     inset rgba(56, 57, 58, 0.247) 6px 6px 10px,
     rgb(255, 255, 255) 6px 6px 10px;
@@ -67,17 +67,19 @@ body{
 }
 @media screen and (max-width:560px){
     .container{
-        height: 80%;
-        width: 80%;
-        padding: 0;
+        height: 95%;
+        width: 95%;
+        padding: 0 20px;
         margin:  auto;
         overflow: hidden;
     }
     .container button{
         height: 50px;
         width: 50px;
+        animation-play-state: paused;
+        margin: 2px 5px;
     }
     .container input{
-        margin: 25px 30px;
+        margin: 25px 10px;
     }
 }
