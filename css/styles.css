@@ -52,8 +52,6 @@ body{
     animation-delay: calc(.2s * var(--i));
 
 }
-.container button:hover{
-}
 @keyframes animate{
     0%{
         transform: translate(-10px,10px);
